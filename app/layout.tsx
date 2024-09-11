@@ -9,6 +9,10 @@ import {
 import "./globals.css"
 import { Metadata } from "next"
 import { ModalProvider } from "@/providers/modal-provider"
+import prismadb from "@/lib/prismadb"
+import { ToasterProvider } from "@/providers/toast-provider"
+
+
 export const metadata: Metadata = {
   title: "Admin Dashboard",
   description: "Admin Dashboard",
@@ -18,17 +22,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
       <ClerkProvider>
           <html lang="en">
               <body>
+                <ToasterProvider />
                 <ModalProvider />
-                  <SignedOut>
-                      <RedirectToSignIn />
-                  </SignedOut>
-                  <SignedIn>
-                      <UserButton />
-                  </SignedIn>
                   {children}
               </body>
           </html>
