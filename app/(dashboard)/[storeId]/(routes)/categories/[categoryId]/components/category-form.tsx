@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import {toast} from "react-hot-toast";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
-import { AlertModal } from "@/components/modals/aler-modal";
+import { AlertModal } from "@/components/modals/alert-modal";
 import { open } from "fs";
 import { useOrigin } from "@/hooks/use-origin";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
